@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Formulario Argus</title>
+</head>
+
+<body>
+  <div class="card" style="height: 100vh;">
+    <div class="card-body">
+      <div class="container">
+        <form action="">
+          <div class="row">
+            <div class="col-8 col-md-4">
+              <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" [(ngModel)]="pessoa.nome" name="nome" class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-auto">
+              <div class="form-group">
+                <label for="rg">RG:</label>
+                <input type="number" id="rg" [(ngModel)]="pessoa.rg" name="rg" class="form-control">
+              </div>
+            </div>
+
+            <div class="col-3 col-auto">
+              <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="number" id="cpf" [(ngModel)]="pessoa.cpf" name="cpf" class="form-control" maxlength="11">
+              </div>
+            </div>
+
+            <div class="col-2 col-auto">
+              <div class="form-group">
+                <label for="select">Sexo:</label>
+                <select class="form-control" [(ngModel)]="pessoa.sexo" name="select" id="select">
+                  <option selected>Escolher...</option>
+                  <option>Masculino</option>
+                  <option>Feminino</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-2,5 col-auto">
+              <div class="form-group">
+                <label for="nascimento">Nascimento:</label>
+                <input type="date" id="nascimento" [(ngModel)]="pessoa.nascimento" name="nascimento"
+                  class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8 col-md-4">
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" [(ngModel)]="pessoa.email" name="email" id="email" class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 ">
+              <div class="form-group">
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" [(ngModel)]="pessoa.rua" name="rua" class="form-control">
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                <label for="numero">Numero:</label>
+                <input type="text" id="numero" [(ngModel)]="pessoa.numero" name="numero" class="form-control">
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="form-group">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" [(ngModel)]="pessoa.bairro" name="bairro" class="form-control">
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="form-group">
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" [(ngModel)]="pessoa.complemento" name="complemento"
+                  class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-auto">
+              <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" [(ngModel)]="pessoa.cidade" name="cidade" class="form-control">
+              </div>
+            </div>
+
+            <div class="col-3 col-auto">
+              <div class="form-group">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" [(ngModel)]="pessoa.estado" name="estado" class="form-control">
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="number" id="cep" [(ngModel)]="pessoa.cep" name="cep" class="form-control">
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" (click)="teste()">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
